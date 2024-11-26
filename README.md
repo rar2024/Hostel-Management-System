@@ -1,9 +1,2 @@
-Index
-Hostels
-Rules
-Feedback
-Facilities
-Contact
-Boy's-hostel
-Girl's hostel
-Images
+The proposed Hostel Management System  is an innovative web-based solution designed to streamline the accommodation process for new and existing students. This system provides an intuitive platform where joining students can access comprehensive details about available hostel rooms, including pricing, facilities, and occupancy status. By leveraging modern web technologies, the system offers real-time updates on room availability, allowing students to make informed decisions efficiently.
+Key features include user-friendly interfaces for viewing room layouts, amenities, and fee structures. The system also integrates advanced search functionality, enabling students to filter options based on preferences such as room type, proximity to campus, or budget. Additionally, the platform ensures transparency in the allocation process, reducing administrative workload and improving user satisfaction.

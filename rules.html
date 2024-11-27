@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSVTU Hostel Rules</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipMGj3EI0cyjuM_PqHOpXDHxfbQ2vkIib5ym2TeB=s1360-w1360-h1020');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #3f51b5;
+            color: white;
+        }
+
+        .rules-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 30px;
+        }
+
+        .rule-category {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .rule-category.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #3f51b5;
+            border-bottom: 2px solid #3f51b5;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+            font-size: 18px;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .pulsing-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            display: inline-block;
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="rules-container">
+        <h1>CSVTU Hostel Rules</h1>
+
+        <div class="rule-category">
+            <h2><span class="pulsing-icon">🤝</span>General Conduct</h2>
+            <ul>
+                <li>Respect for others</li>
+                <li>Observe quiet hours</li>
+                <li>Maintain cleanliness</li>
+            </ul>
+        </div>
+
+        <div class="rule-category">
+            <h2><span class="pulsing-icon">🔒</span>Security and Safety</h2>
+            <ul>
+                <li>Adhere to curfew</li>
+                <li>Follow visitor policy</li>
+                <li>No prohibited items</li>
+                <li>Observe fire safety</li>
+            </ul>
+        </div>
+
+        <div class="rule-category">
+            <h2><span class="pulsing-icon">🏠</span>Room and Property</h2>
+            <ul>
+                <li>Report property damage</li>
+                <li>No unauthorized room changes</li>
+                <li>No cooking in rooms</li>
+            </ul>
+        </div>
+
+        <div class="rule-category">
+            <h2><span class="pulsing-icon">📅</span>Attendance and Leave</h2>
+            <ul>
+                <li>Inform about absences</li>
+                <li>Apply for leave in advance</li>
+            </ul>
+        </div>
+
+        <div class="rule-category">
+            <h2><span class="pulsing-icon">🚫</span>Discipline and Decorum</h2>
+            <ul>
+                <li>No smoking, alcohol, or drugs</li>
+                <li>Maintain appropriate behavior</li>
+                <li>Dress appropriately in common areas</li>
+            </ul>
+        </div>
+
+        <div class="rule-category">
+            <h2><span class="pulsing-icon">📌</span>Miscellaneous</h2>
+            <ul>
+                <li>Pay hostel fees on time</li>
+                <li>Conserve electricity</li>
+                <li>No pets allowed</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            var elements = document.getElementsByClassName('rule-category');
+            for (var i = 0; i < elements.length; i++) {
+                if (isElementInViewport(elements[i])) {
+                    elements[i].classList.add('visible');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

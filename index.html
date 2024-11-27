@@ -1,0 +1,375 @@
+<head></head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f4f8;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipMGj3EI0cyjuM_PqHOpXDHxfbQ2vkIib5ym2TeB=s1360-w1360-h1020');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .logo-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 15px;
+            padding: 0 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .institute-name {
+            color: #1a237e;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 3px;
+            line-height: 1.3;
+        }
+
+        .hostel {
+            color: #3f51b5;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 5px;
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .nav-container {
+            width: 100%;
+            background-color: #1a237e;
+            padding: 8px 0;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-link:hover, .nav-link:focus {
+            background-color: #3f51b5;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+
+        .nav-link:active {
+            transform: translateY(0);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 1024px) {
+            .institute-name {
+                font-size: 20px;
+            }
+            
+            .hostel {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .logo-title {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .institute-name {
+                font-size: 18px;
+            }
+
+            .hostel {
+                font-size: 24px;
+            }
+
+            .nav-menu {
+                flex-wrap: wrap;
+            }
+
+            .nav-item {
+                margin: 5px;
+            }
+        }
+
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin: 30px auto;
+            max-width: 1200px;
+            padding: 40px;
+            text-align: left;
+        }
+
+        .info-box h2 {
+            color: #1a237e;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        .animated-text {
+            overflow: visible;
+            white-space: normal;
+            margin: 0 auto 20px;
+            letter-spacing: 0.05em;
+            line-height: 1.6;
+            font-size: 18px;
+            opacity: 0;
+            animation: fade-in 2s forwards;
+        }
+
+        @keyframes fade-in {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+            width: 250px;
+        }
+
+        .team-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .team-details {
+            background-color: #f8f8f8;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            width: 100%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .team-details h3 {
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .team-details p {
+            margin: 0;
+            color: #666;
+        }
+
+        @media (max-width: 768px) {
+            .team {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .team-member {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        .explore-section {
+            display: flex;
+            justify-content: center;
+            padding: 40px 0;
+            margin-top: 20px;
+        }
+
+        .explore-button {
+            padding: 15px 40px;
+            font-size: 1.2em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            background: linear-gradient(45deg, #1a237e, #3f51b5);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .explore-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #3f51b5, #1a237e);
+        }
+
+        .explore-button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .explore-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .explore-button:hover::before {
+            left: 100%;
+        }
+
+        .explore-button i {
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .explore-button:hover i {
+            transform: translateX(5px);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-title">
+            <img src="IMAGE/Chhattisgarh_Swami_Vivekanand_Technical_University_transparent_logo (1).png" alt="University Logo" class="logo">
+            <div class="title">
+                <div class="institute-name">छत्तीसगढ़ स्वामी विवेकानंद तकनीकी विश्वविद्यालय</div>
+                <div class="institute-name">CHHATTISGARH SWAMI VIVEKANAND TECHNICAL UNIVERSITY</div>
+                <div class="hostel">HOSTEL</div>
+            </div>
+        </div>
+        <nav class="nav-container">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- ... rest of the header content ... -->
+    </header>
+    <div class="info-box">
+        <h2>Welcome to CSVTU Hostel Management System</h2>
+        <p class="animated-text">
+            Chhattisgarh Swami Vivekanand Technical University (CSVTU) is committed to providing excellent education and comfortable living facilities for its students. Our state-of-the-art campus is designed to foster academic growth and personal development.
+        </p>
+        <p class="animated-text" style="animation-delay: 2s;">
+            Our Hostel Management System ensures a safe, organized, and enjoyable residential experience for all our students. We understand the importance of a conducive living environment in supporting academic success and overall well-being.
+        </p>
+        <p class="animated-text" style="animation-delay: 4s;">
+            We offer modern amenities, 24/7 security, and a supportive environment to help students focus on their academic and personal growth. Our facilities include comfortable rooms, high-speed internet, study areas, recreational spaces, and dining options that cater to diverse needs.
+        </p>
+        <p class="animated-text" style="animation-delay: 6s;">
+            Join our vibrant community and experience the best of campus life at CSVTU! Here, you'll find opportunities to build lasting friendships, engage in extracurricular activities, and create memories that will last a lifetime.
+        </p>
+    </div>
+    <section class="team">
+        <div class="team-member">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQGWLzYg00zBmA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715456913192?e=1733961600&v=beta&t=2QoHV7RXIFzi7v9CLdy4ARvwzygpBc8VbROOd-Yua2A" alt="RAJ ARYAN" class="team-photo">
+            <div class="team-details">
+                <h3>RAJ ARYAN</h3>
+                <p>Team Member</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFDk3IYv6pnLw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710241064559?e=1733961600&v=beta&t=-Shyl403dYQ4DFjQqhUknlVsDQjSETtf7DYU5xPlfyM" alt="ANAMIKA DAS" class="team-photo">
+            <div class="team-details">
+                <h3>ANAMIKA DAS</h3>
+                <p>Team Member</p>
+            </div>
+        </div>
+        
+        <div class="team-member">
+            <img src="https://media.licdn.com/dms/image/v2/D4D03AQFEivggFqZrdw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1697553123293?e=1738195200&v=beta&t=ajTEUf8-cHZfhpHJhgB6NwJBO-70eL-Sv8nk7mVWV0o" alt="ROHAN G RAJ" class="team-photo">
+            <div class="team-details">
+                <h3>ROHAN G RAJ</h3>
+                <p>Team Member</p>
+            </div>
+        </div>
+    </section>
+    <div class="explore-section">
+        <a href="hostels.html" class="explore-button">
+            Explore Hostels
+            <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    <!-- ... rest of the body content ... -->
+</body>

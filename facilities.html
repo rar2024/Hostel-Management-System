@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSVTU Hostel Facilities</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipMGj3EI0cyjuM_PqHOpXDHxfbQ2vkIib5ym2TeB=s1360-w1360-h1020');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #3f51b5;
+            color: white;
+        }
+
+        .facilities-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 30px;
+        }
+
+        .facility-category {
+            margin-bottom: 40px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .facility-category.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        h2 {
+            color: #3f51b5;
+            border-bottom: 2px solid #3f51b5;
+            padding-bottom: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .floating-icon {
+            font-size: 24px;
+            margin-right: 10px;
+            display: inline-block;
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="facilities-container">
+        <h1>CSVTU Hostel Facilities</h1>
+
+        <div class="facility-category">
+            <h2><span class="floating-icon">🛏️</span>Accommodation</h2>
+            <ul>
+                <li>Comfortable single/double occupancy rooms</li>
+                <li>Well-maintained beds with clean mattresses and linens</li>
+                <li>Study table and chair in each room</li>
+                <li>Spacious wardrobes for storage</li>
+                <li>Ceiling fans and adequate lighting</li>
+            </ul>
+        </div>
+
+        <div class="facility-category">
+            <h2><span class="floating-icon">📚</span>Academic Facilities</h2>
+            <ul>
+                <li>Well-equipped study rooms on each floor</li>
+                <li>High-speed Wi-Fi throughout the hostel</li>
+                <li>Computer lab with printing facilities</li>
+                <li>Mini library with academic resources</li>
+                <li>Group discussion areas</li>
+            </ul>
+        </div>
+
+        <div class="facility-category">
+            <h2><span class="floating-icon">🏋️</span>Sports and Recreation</h2>
+            <ul>
+                <li>Indoor games room (table tennis, carrom, chess)</li>
+                <li>Outdoor sports facilities (basketball, volleyball courts)</li>
+                <li>Fully equipped gymnasium</li>
+                <li>Yoga and meditation area</li>
+                <li>TV room with comfortable seating</li>
+            </ul>
+        </div>
+
+        <div class="facility-category">
+            <h2><span class="floating-icon">🍽️</span>Dining and Kitchen</h2>
+            <ul>
+                <li>Spacious dining hall with hygienic food service</li>
+                <li>Nutritious and varied meal options</li>
+                <li>24/7 water purifiers on each floor</li>
+                <li>Microwave and refrigerator facilities</li>
+                <li>Snack vending machines</li>
+            </ul>
+        </div>
+
+        <div class="facility-category">
+            <h2><span class="floating-icon">🧼</span>Hygiene and Maintenance</h2>
+            <ul>
+                <li>Daily cleaning of rooms and common areas</li>
+                <li>Well-maintained washrooms and shower facilities</li>
+                <li>Laundry room with washing machines</li>
+                <li>Regular pest control measures</li>
+                <li>24/7 maintenance staff for quick repairs</li>
+            </ul>
+        </div>
+
+        <div class="facility-category">
+            <h2><span class="floating-icon">🔒</span>Safety and Security</h2>
+            <ul>
+                <li>24/7 security personnel and CCTV surveillance</li>
+                <li>Biometric access control system</li>
+                <li>Fire safety equipment and emergency exits</li>
+                <li>First-aid facilities and on-call medical support</li>
+                <li>Regular safety drills and awareness programs</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function handleScroll() {
+            var elements = document.getElementsByClassName('facility-category');
+            for (var i = 0; i < elements.length; i++) {
+                if (isElementInViewport(elements[i])) {
+                    elements[i].classList.add('visible');
+                }
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('load', handleScroll);
+    </script>
+</body>
+</html>

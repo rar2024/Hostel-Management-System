@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CSVTU Hostel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://lh3.googleusercontent.com/p/AF1QipMGj3EI0cyjuM_PqHOpXDHxfbQ2vkIib5ym2TeB=s1360-w1360-h1020');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-link {
+            color: #1a237e;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            background-color: #3f51b5;
+            color: white;
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .contact-title {
+            text-align: center;
+            color: #1a237e;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .team-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: nowrap;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        .contact-card {
+            flex: 0 0 300px;
+            max-width: 300px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .contact-name {
+            color: #1a237e;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .contact-role {
+            color: #3f51b5;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            padding: 8px;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-item:hover {
+            background-color: #e8eaf6;
+        }
+
+        .contact-item i {
+            margin-right: 10px;
+            color: #3f51b5;
+        }
+
+        .contact-item a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: #3f51b5;
+        }
+
+        @media (max-width: 1024px) {
+            .team-grid {
+                flex-wrap: wrap;
+            }
+            
+            .contact-card {
+                flex: 0 0 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .contact-card {
+                flex: 0 0 100%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="feedback.html" class="nav-link">Feedback</a></li>
+                <li class="nav-item"><a href="facilities.html" class="nav-link">Facilities</a></li>
+                <li class="nav-item"><a href="rules.html" class="nav-link">Rules</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        
+        <div class="team-grid">
+            <div class="contact-card">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQGWLzYg00zBmA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1715456913192?e=1733961600&v=beta&t=2QoHV7RXIFzi7v9CLdy4ARvwzygpBc8VbROOd-Yua2A" alt="RAJ ARYAN" class="profile-image">
+                <h2 class="contact-name">RAJ ARYAN</h2>
+                <p class="contact-role">Team Member</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:rrajariann@gmail.com">rrajariann@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:6287278385">6287278385</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/raj-aryan-62172a260/" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFDk3IYv6pnLw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1710241064559?e=1733961600&v=beta&t=-Shyl403dYQ4DFjQqhUknlVsDQjSETtf7DYU5xPlfyM" alt="ANAMIKA DAS" class="profile-image">
+                <h2 class="contact-name">ANAMIKA DAS</h2>
+                <p class="contact-role">Team Member</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:iamdasanamika@gmail.com">iamdasanamika@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:9748274671">9748274671</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="#" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-card">
+                <img src="https://media.licdn.com/dms/image/v2/D4D03AQFEivggFqZrdw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1697553123293?e=1738195200&v=beta&t=ajTEUf8-cHZfhpHJhgB6NwJBO-70eL-Sv8nk7mVWV0o" alt="ROHAN G RAJ" class="profile-image">
+                <h2 class="contact-name">ROHAN G RAJ</h2>
+                <p class="contact-role">Team Member</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:garlrgr@gmail.com">garlrgr@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:8088893699">8088893699</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="#" target="_blank">LinkedIn Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
